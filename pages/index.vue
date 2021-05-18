@@ -1,11 +1,28 @@
 <template>
   <div class="">
-    <div class="container">
-      <h1 class="title">Welcome</h1>
-      <h3 class="text-2xl">
-        My name is Jose Cabrera and i'm a Software Developer.
-      </h3>
-    </div>
+    <button @click="show = !show">show?</button>
+
+    <transition name="leftenter">
+      <div v-if="show" id="hello" class="container">
+        <h1 class="title">Welcome</h1>
+        <h3 class="text-2xl">
+          My name is Jose Cabrera <br />
+          I'm a Software Developer.
+        </h3>
+        <button>Get to know me</button>
+      </div>
+    </transition>
+    <section id="aboutme" class="experience">
+      <h1>About me</h1>
+      <button>Ver resumen Ingles</button>
+      <button>Ver resumen Español</button>
+    </section>
+    <section class="experience">
+      <h1>Projects o Experiencia</h1>
+      <h2>Projecto 1</h2>
+      <h2>Projecto 2</h2>
+      <h2>Projecto 3</h2>
+    </section>
     <section class="experience">
       My experience so far<a href="https://github.com/JoseCabreraJC">
         <img
@@ -25,18 +42,24 @@
     <section class="contact">
       <h1 class="text-3xl leading-loose">Contact</h1>
       <button class="px-5 py-2 border rounded hover:bg-green-400">
-        Contact Me
-        <address>
-          E-Mail :
-          <a href="josem.cabrera259@gmail.com">josem.cabrera259@gmail.com</a>
-        </address>
+        Contact Me!
+        <a href="mailto:josem.cabrera259@gmail.com"></a>
       </button>
     </section>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      show: false,
+    }
+  },
+  mounted() {
+    this.show = true
+  },
+}
 </script>
 
 <style>
@@ -88,5 +111,15 @@ export default {}
 
 .links {
   padding-top: 15px;
+}
+
+.leftenter-enter-active,
+.leftenter-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.leftenter-enter-from,
+.leftenter-leave-to {
+  opacity: 0;
 }
 </style>
