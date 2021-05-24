@@ -1,16 +1,17 @@
 <template>
-  <div id="container">
-    <section :id="id">
-      <h1>Hi! My Name is Jose Cabrera</h1>
-      <h2>and i'm the <span> Software Developer </span></h2>
-    </section>
-  </div>
+  <section :id="id">
+    <h1>Projects</h1>
+    <h2>
+      Here its going to be a <br /><span> HUGE </span> <br />
+      list of neverfinished projects
+    </h2>
+  </section>
 </template>
 
 <script lang="ts">
 import { ref, defineComponent } from "vue";
 export default defineComponent({
-  name: "MyName",
+  name: "Projects",
   props: {
     id: {
       type: String,
@@ -25,7 +26,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-#container {
+section {
   height: 90vh;
   border-style: solid;
   border-color: red;

@@ -1,22 +1,32 @@
 <template>
-  <MyName />
-  <MyName />
+  <Nav />
+  <MyName id="home" />
+  <AboutMe id="aboutme" />
+  <Projects id="projects" />
+  <Contact id="contact" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
 import MyName from "./components/MyName.vue";
+import Contact from "./components/Contact.vue";
+import Nav from "./components/Nav.vue";
+import Projects from "./components/Projects.vue";
+import AboutMe from "./components/AboutMe.vue";
 
 export default defineComponent({
   name: "App",
   components: {
-    HelloWorld,
     MyName,
+    Nav,
+    Contact,
+    Projects,
+    AboutMe,
   },
 });
 </script>
-
+git branch -m vite3-vue3 vite-vue3 git fetch origin git branch -u
+origin/vite-vue3 vite-vue3
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

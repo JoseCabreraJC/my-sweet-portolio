@@ -1,16 +1,18 @@
 <template>
-  <div id="container">
-    <section :id="id">
-      <h1>Hi! My Name is Jose Cabrera</h1>
-      <h2>and i'm the <span> Software Developer </span></h2>
-    </section>
-  </div>
+  <section :id="id">
+    <h1>Contactame</h1>
+    <ul>
+      <li>Linkedin</li>
+      <li>Github</li>
+      <li>link a cv</li>
+    </ul>
+  </section>
 </template>
 
 <script lang="ts">
 import { ref, defineComponent } from "vue";
 export default defineComponent({
-  name: "MyName",
+  name: "Contact",
   props: {
     id: {
       type: String,
@@ -25,7 +27,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-#container {
+section {
   height: 90vh;
   border-style: solid;
   border-color: red;
