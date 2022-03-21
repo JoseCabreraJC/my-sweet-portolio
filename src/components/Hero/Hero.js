@@ -8,8 +8,8 @@ const Hero = () => (
   <Section row nopading>
     <LeftSection>
       <SectionTitle main center>
-        Welcome to <br/>
-        My Personal Portfolio
+        Welcome to José María Cabrera <br/>
+        Personal Portfolio
       </SectionTitle>
       <SectionText>
         Comming from a highly changing context i'm used to do what i need to do with anything i have at hand. Be certain that whatever needs donde, it will be done.
